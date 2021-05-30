@@ -1,0 +1,279 @@
+/* Animations */
+@keyframes cloud-right-flow{
+    from {
+        right: 200px;
+    }
+    to{
+        right: 300px;
+    }
+}
+
+@keyframes cloud-left-flow{
+    from {
+        left: 200px;
+    }
+    to{
+        left: 300px;
+    }
+}
+
+@keyframes caret {
+    50% {
+      border-color: transparent;
+    }
+}
+
+/* CSS Start */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #40514E;
+    margin: 0px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+.navbar {
+    background-color: #d3f3f5;
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.navbar li{
+    list-style: none;
+    display: inline;
+    color: #11999E;
+    padding: 0px 20px;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    color: #66BFBF;
+}
+
+#logo {
+    font-family: 'Mrs Saint Delafield', cursive;
+    font-size: 2rem;
+    display: inline-block;
+    padding-right: 100px;
+    margin: 0px;
+}
+
+.top-container {
+    background-color: #d3f3f5;
+    position: relative;
+    padding-top: 200px;
+}
+
+h1 {
+    margin-top: 0px;
+    font-family: 'Mrs Saint Delafield', cursive;
+    font-size: 5.625rem;
+    margin: 50px auto 0px auto;
+    color: #11999E;
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    color: #11999E;
+    font-weight: normal;
+}
+
+h3 {
+    font-family: 'Rubik', sans-serif;
+    color: #11999E;
+    font-weight: bolder;
+}
+
+a {
+    color: #11999E;
+    text-decoration: none;
+}
+
+#web-span {
+    text-decoration: underline;
+    animation: caret 1s steps(1) infinite;
+}
+
+#web-head {
+    margin-top: 0px;
+}
+
+.top-cloud {
+    position: absolute;
+    top: 120px;
+    right: 300px;
+    animation: cloud-right-flow 5s 0s;
+}
+.bottom-cloud {
+    position: absolute;
+    left: 300px;
+    bottom: 300px;
+    animation: cloud-left-flow 5s 0s;
+}
+
+.profile-row img {
+    margin-top: 100px;
+    height: 200;
+    max-width: 200px;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.profile-row p {
+    margin: auto;
+    width: 30%;
+}
+
+.skill-row {
+    width: 40%;
+    margin: 50px auto;
+    text-align: left;
+    line-height: 2;
+    display: grid;
+    grid-template-columns: auto;
+    place-items: center;
+}
+
+.skills{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    column-gap: 15px;
+    text-align: center;
+}
+
+hr {
+    border-style: dotted;
+    border-width: 8px;
+    border-color: #e2ecec;
+    margin: 100px auto;
+    width: 4%;
+    border-bottom: none;
+}
+
+.contact-me {
+    margin: 100px auto;
+    width: 35%;
+}
+
+.contact-me p{
+    padding: 30px;
+}
+
+.btn {
+    background-color: #11999E;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #EAF6F6;
+}
+
+.contact-me a.btn:hover {
+    background-color: #66BFBF;
+}
+
+.bottom-container {
+    background-color: #d3f3f5;
+    padding: 40px 0px 20px 0px;
+}
+
+.copyright {
+    color: #11999E;
+    font-size: 0.80rem;
+}
+
+.copyright span{
+    padding-right: 4px;
+    font-size: 0.70rem;
+}
+
+.footer-link{
+    margin: 0px 20px;
+}
+
+.bottom-container a.footer-link:hover {
+    color: #66BFBF;
+}
+
+.container{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    place-content: center;
+    column-gap: 20px;
+    row-gap: 50px;
+}
+
+.col{
+    background-color: #FFF;
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: ease-in-out 0.2s;
+}
+
+.col img{
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.col:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 900px){
+    .row{
+        display: grid;
+        grid-template-columns: auto;
+        place-content: center;
+    }
+
+    .navbar ul{
+        padding-left: 0px;
+    }
+
+    .navbar li{
+        padding: 15px;
+    }
+
+    #logo{
+        font-size: 1.5rem;
+        padding: 0;
+    }
+
+    .profile-row img{
+        max-width: 100px;
+        margin: 100px auto 0;
+    }
+
+    .profile-row p{
+        width: 80%;
+    }
+
+    .skill-row{
+        width: 80%;
+    }
+
+    .skills{
+        grid-template-columns: auto auto;
+        row-gap: 15px;
+    }
+
+    .contact-me {
+        width: 80%;
+    }
+}
