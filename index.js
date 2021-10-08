@@ -45,7 +45,7 @@ const sr = ScrollReveal({
   origin: 'top',
   distance: '80px',
   duration: 2000,
-  reset: true
+  reset: false
 });
 
 // top-container
@@ -56,8 +56,10 @@ sr.reveal('.bottom-cloud', { delay: 200 });
 sr.reveal('.mountain-img', { delay: 500 });
 
 // middle-container
-sr.reveal('.profile-row', {});
-sr.reveal('.skill-row', { delay: 200 });
+sr.reveal('.middle-container', {});
+sr.reveal('img', { delay: 200 });
+sr.reveal('h2', { delay: 200 });
+sr.reveal('p', { delay: 200 });
 sr.reveal('.skills > div', { delay: 200 });
 sr.reveal('.project', { delay: 200 });
 sr.reveal('.row', { delay: 200 });
@@ -69,3 +71,4 @@ sr.reveal('h2', { delay: 200 });
 sr.reveal('h3', { delay: 300 });
 sr.reveal('.contact-me p', { delay: 400 });
 sr.reveal('.btn', { delay: 500 });
+sr.reveal('.bottom-container', { delay: 500 });
