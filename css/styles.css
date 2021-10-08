@@ -102,6 +102,10 @@ a {
     text-decoration: none;
 }
 
+p {
+    color: #66BFBF;
+}
+
 #web-span {
     text-decoration: underline;
     animation: caret 1s steps(1) infinite;
@@ -216,11 +220,16 @@ hr {
     grid-template-columns: auto auto auto;
     place-content: center;
     column-gap: 20px;
-    row-gap: 50px;
+    row-gap: 20px;
 }
 
 .col{
-    background-color: #FFF;
+    background-color: #d3f3f5;
+    color: #66BFBF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 250px;
     width: 250px;
     border-radius: 10px;
@@ -228,16 +237,16 @@ hr {
     transition: ease-in-out 0.2s;
 }
 
-.col img{
-    height: 250px;
-    width: 250px;
-    border-radius: 10px;
+.col a{
+    color: #11999E;
+    font-weight: 700;
 }
 
 .col:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
 }
+
 
 /* Media Queries */
 @media only screen and (max-width: 900px){
